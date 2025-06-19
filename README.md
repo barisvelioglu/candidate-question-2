@@ -47,11 +47,3 @@ Via config file or CLI flag:
 > Bonus: Add new output modules (e.g., Kafka, REST API)
 
 ---
-
-## ⚙️ Sample Config (`config/example_config.yaml`)
-
-```yaml
-input_source: generated
-output_target: file
-output_format: csv
-anomaly_method: zscore
