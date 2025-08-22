@@ -1,47 +1,78 @@
-# 🏭 OEE Anomaly Detection – Developer Challenge
-
-Welcome! This challenge is designed to evaluate your ability to think critically, structure flexible applications, and use modern tools (including AI) effectively.
-
-## 🎯 Objective
-
-Build a modular and configurable application that:
-1. Reads or generates OEE (Overall Equipment Effectiveness) data
-2. Detects anomalies in the data
-3. Outputs results to a destination based on configuration
+Got it. Here’s the same challenge document, cleaned up with **no icons or emojis** so you can share it directly:
 
 ---
 
-## ⏱ Time Guidelines
-- **1 hour** for implementation
+# OEE Anomaly Detection – Live Coding Challenge
+
+Welcome! This challenge evaluates your ability to think critically, design modular software, and deliver a working solution under time constraints. Please read carefully.
+
+## Objective
+
+Build a **config-driven application** that:
+
+1. Generates or ingests OEE (Overall Equipment Effectiveness) data
+2. Detects anomalies via a pluggable detection strategy
+3. Exports results to one or more configurable destinations
+
+## Timebox
+
+* Approximately **1 hour** to implement a working prototype
+* Favor clarity, modularity, and correctness over completeness
+
+## Provided
+
+* `seed_oee_data.csv` (realistic sample for reference or testing)
+
+## Requirements
+
+### 1) Input Sources
+
+Support **two input types**, selectable via CLI flag or configuration:
+
+* `file`: read from a CSV file
+* `generated`: produce synthetic OEE data (at least 500 rows, including anomalies)
+
+### 2) Anomaly Detection
+
+Implement **two detection strategies**, selectable via CLI/config:
+
+* `zscore`: a statistical approach
+* `rules`: a simple threshold/logic–based approach (define your own sensible thresholds)
+
+### 3) Output Targets
+
+Support **two output targets**:
+
+* `file`: write anomalies to CSV or JSON
+* `db`: write anomalies to SQLite (PostgreSQL is a bonus)
+
+### 4) Modularity
+
+* Implement input, detection, and output as **separate modules/components**
+* Design so new inputs/outputs/detectors can be added with minimal changes
+* Avoid large conditional blocks; prefer a plugin-like structure
+
+### 5) Bonus (optional)
+
+* Externalized, configurable thresholds (e.g., JSON)
+* Multiple outputs in a single run (e.g., file + db)
+* Basic CLI help
+
+## Evaluation Criteria
+
+* **Architecture & Modularity**: Clear separation of concerns; ease of extensibility
+* **Correctness**: Reasonable anomaly detection behavior for both strategies
+* **Code Quality**: Readability, structure, and concise documentation/comments
+* **Execution**: Usability via CLI or configuration without hardcoding
+* **Bonus**: Any optional features implemented well
+
+## Deliverable
+
+* A runnable prototype, with brief instructions (README or inline) on how to execute with different inputs, detectors, and outputs
+* Include any schema/assumptions you make
+
+Good luck!
+
 ---
 
-## 📂 Provided
-- `seed_oee_data.csv`: Small real-world sample for reference or expansion
-
----
-
-## 🔧 Requirements
-
-### 1. Synthetic Data Generation
-- You must generate at least 100–500 rows of realistic OEE data.
-- Include some anomalies (e.g., very low OEE caused by performance/availability/quality issues).
-
-### 2. Configurable Input Source
-Via config file or CLI flag:
-- `file`: read from a CSV file
-- `generated`: generate synthetic data
-
-> Bonus: `db` (read from SQLite/PostgreSQL)
-
-### 3. Anomaly Detection
-- Use any approach: Z-score, IQR, logic rules, etc.
-- Flag anomalies in the dataset
-
-### 4. Configurable Output Target
-Via config file or CLI flag:
-- `file`: write results to a CSV or JSON
-- `db`: write to SQLite or PostgreSQL
-
-> Bonus: Add new output modules (e.g., Kafka, REST API)
-
----
+Do you also want me to prepare a **short README-style instruction example** (like what the candidate should ideally submit back)? That way you’ll have a baseline for grading.
