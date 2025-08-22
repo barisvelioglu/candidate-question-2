@@ -1,7 +1,3 @@
-Got it. Here’s the same challenge document, cleaned up with **no icons or emojis** so you can share it directly:
-
----
-
 # OEE Anomaly Detection – Live Coding Challenge
 
 Welcome! This challenge evaluates your ability to think critically, design modular software, and deliver a working solution under time constraints. Please read carefully.
