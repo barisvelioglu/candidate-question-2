@@ -73,6 +73,3 @@ Support **two output targets**:
 
 Good luck!
 
----
-
-Do you also want me to prepare a **short README-style instruction example** (like what the candidate should ideally submit back)? That way you’ll have a baseline for grading.
