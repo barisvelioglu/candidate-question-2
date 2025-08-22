@@ -13,8 +13,6 @@ Build a modular and configurable application that:
 
 ## ⏱ Time Guidelines
 - **1 hour** for implementation
-- **30 minutes** for code review and discussion
-
 ---
 
 ## 📂 Provided
